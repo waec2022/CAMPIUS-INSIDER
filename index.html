@@ -14,6 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -32,8 +33,8 @@
 <div class="search-shell search-shell--hero" id="searchShell">
   <h1 class="hero-heading" id="heroHeading">Your campus.<br><span class="hero-heading__accent">Any answer.</span></h1>
   <form class="search-bar" id="homeSearchForm" role="search">
-    <span class="search-bar__icon" aria-hidden="true">🔍</span>
-    <input class="search-bar__input" id="searchInput" type="search" placeholder="Search your campus… e.g. Bursary, CSC 201, admission requirements" autocomplete="off">
+    <input class="search-bar__input" id="searchInput" type="search" placeholder="Search for anything on your campus…" autocomplete="off" aria-label="Search">
+    <button type="submit" class="search-bar__submit" aria-label="Search">→</button>
   </form>
 </div>
 
@@ -41,15 +42,61 @@
 
   <!-- HOME VIEW -->
   <section id="view-home">
-    <div class="quick-access" id="quickAccessGrid"></div>
 
-    <div class="updates-section">
-      <div class="updates-section__header">
-        <h2>Latest Campus Updates</h2>
-        <a href="#/search" class="view-all-link">View all ›</a>
-      </div>
-      <div class="updates-list" id="latestUpdates"></div>
+    <div class="category-grid">
+      <a class="category-tile" href="#/list?type=event">
+        <span class="category-tile__icon category-tile__icon--purple">📅</span>
+        <span class="category-tile__body">
+          <span class="category-tile__title">Events</span>
+          <span class="category-tile__desc">See upcoming events, programs and activities.</span>
+        </span>
+        <span class="category-tile__arrow">›</span>
+      </a>
+      <a class="category-tile" href="#/list?type=campaign">
+        <span class="category-tile__icon category-tile__icon--green">🎯</span>
+        <span class="category-tile__body">
+          <span class="category-tile__title">Campaigns</span>
+          <span class="category-tile__desc">Check out ongoing campaigns and initiatives.</span>
+        </span>
+        <span class="category-tile__arrow">›</span>
+      </a>
+      <a class="category-tile" href="#/list?type=announcement">
+        <span class="category-tile__icon category-tile__icon--blue">📢</span>
+        <span class="category-tile__body">
+          <span class="category-tile__title">Announcements</span>
+          <span class="category-tile__desc">Get the latest important updates from your school.</span>
+        </span>
+        <span class="category-tile__arrow">›</span>
+      </a>
+      <a class="category-tile" href="#/list?type=update">
+        <span class="category-tile__icon category-tile__icon--orange">📣</span>
+        <span class="category-tile__body">
+          <span class="category-tile__title">Latest Updates</span>
+          <span class="category-tile__desc">News, alerts and campus information.</span>
+        </span>
+        <span class="category-tile__arrow">›</span>
+      </a>
     </div>
+
+    <div class="section-head">
+      <div>
+        <h2 class="section-head__title"><span class="section-head__dot"></span>Featured on Campus</h2>
+        <p>Important events, campaigns and updates just for you.</p>
+      </div>
+      <a href="#/search" class="view-all-link">View All →</a>
+    </div>
+
+    <div class="featured-grid" id="featuredGrid"></div>
+
+    <div class="study-banner">
+      <div class="study-banner__icon" aria-hidden="true">🎓</div>
+      <div class="study-banner__text">
+        <strong>Study. Grow. Succeed.</strong>
+        <span>Your journey matters. Get the information you need, when you need it.</span>
+      </div>
+      <a href="#/search" class="study-banner__btn">Explore Campus →</a>
+    </div>
+
   </section>
 
   <!-- SEARCH / RESULTS VIEW -->
@@ -68,6 +115,7 @@
 </main>
 
 <script src="js/data.js"></script>
-<script src="js/app.js?v=1"></script>
+<script src="js/app.js?v=2"></script>
+<script src="js/home.js"></script>
 </body>
 </html>
