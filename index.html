@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Guide — Your campus. Any answer.</title>
+<meta name="description" content="Instantly search campus offices, lecturers, courses, departments, admissions and more.">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Campus Guide — Your campus. Any answer.">
+<meta property="og:description" content="Instantly search campus offices, lecturers, courses, departments, admissions and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="#/">
+      <span class="brand__mark" aria-hidden="true">🎓</span>
+      CAMPUS <span class="brand__accent">GUIDE</span>
+    </a>
+    <span class="verified-pill">✓ Verified Information</span>
+  </div>
+</header>
+
+<div id="liveBanner"></div>
+
+<div class="search-shell search-shell--hero" id="searchShell">
+  <h1 class="hero-heading" id="heroHeading">Your campus.<br><span class="hero-heading__accent">Any answer.</span></h1>
+  <form class="search-bar" id="homeSearchForm" role="search">
+    <span class="search-bar__icon" aria-hidden="true">🔍</span>
+    <input class="search-bar__input" id="searchInput" type="search" placeholder="Search your campus… e.g. Bursary, CSC 201, admission requirements" autocomplete="off">
+  </form>
+</div>
+
+<main class="page-shell">
+
+  <!-- HOME VIEW -->
+  <section id="view-home">
+    <div class="quick-access" id="quickAccessGrid"></div>
+
+    <div class="updates-section">
+      <div class="updates-section__header">
+        <h2>Latest Campus Updates</h2>
+        <a href="#/search" class="view-all-link">View all ›</a>
+      </div>
+      <div class="updates-list" id="latestUpdates"></div>
+    </div>
+  </section>
+
+  <!-- SEARCH / RESULTS VIEW -->
+  <section id="view-search" style="display:none">
+    <div class="filter-chips" id="filterChips"></div>
+    <p class="results-count" id="resultsCount"></p>
+    <div class="results-list" id="resultsList"></div>
+  </section>
+
+  <!-- DETAIL VIEW -->
+  <section id="view-detail" style="display:none">
+    <a href="#/search" class="back-link">← Back to search</a>
+    <div id="detailBody"></div>
+  </section>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
